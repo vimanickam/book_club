@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}" />
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <title>Book Club</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="navbar justify-content-center bg-home">
+            <div class="">
+                <img src="../static/images/club_logo.png" style="height: 80px; width: 150px;">
+            </div>
+        </div>
+        <div class="d-flex mt-3 mb-3">
+            <div class="col">
+                <h2>Welcome {{session['user_name']}}</h2>
+            </div>
+            <div class="col menu-container">
+                <a href="/logout" class="btn" role="button"><img src="../static/images/logout.jpg" height="50px"></a>
+            </div>
+        </div>
+        <div>
+            <hr size="30">
+        </div>
+
+        <div class="main-content">
+            <div class="sidebar">
+                <div class="mb-3">
+                    <a href="/dashboard" class="btn btn-color" role="button">All Books</a>
+                </div>
+                <div class="mb-3">
+                    <a href="/add" class="btn btn-color" role="button">Add a Book</a>
+                </div>
+                <div class="mb-3">
+                    <a href="/favorites" class="btn btn-color" role="button">My Favorites</a>
+                </div>
+            </div>
+            <div class="mg-left">
+                <h3 class="text-center">Favorite Books
+                    <img src="../static/images/book_fig7.jpg" height="100px">
+                </h3>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="fs-4">Name</th>
+                            <th scope="col" class="fs-4">Author</th>
+                            <th scope="col" class="fs-4">Added By</th>
+                            <th scope="col" class="fs-4">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for book in user.book_list %}
+                        <tr>
+                            <td>{{book.name}}</td>
+                            <td>{{book.author}}</td>
+                            <td>{{user.first_name}} {{user.last_name}}</td>
+                            <td>
+                                <a href="/show/{{book.id}}" class="btn btn-color" role="button" >View</a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <footer class="footer mt-1">
+        <div class="container-fluid">
+            <span class="text-muted">Book Club</span>
+        </div>
+    </footer>
+</body>
+</html>

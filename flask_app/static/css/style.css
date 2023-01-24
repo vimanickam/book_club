@@ -1,0 +1,111 @@
+/* Book Club */
+
+.bg-img {
+    font-family: 'Segoe UI', sans-serif;
+    background-image: url('../images/bgimage.jpg');
+/*    background-repeat: no-repeat;*/
+    /*background-attachment: fixed;*/
+    background-size: cover;
+}
+
+.bg-home {
+    /* background-color: rgb(198,197,185); */
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(128,191,235,1) 0%, rgba(250,250,250,1) 100%);
+    width: 100%;
+    z-index: 1;
+}
+ul,li {
+    list-style: none;
+}
+
+.bg-navbar {
+    background-color: rgb(114,109,168);
+}
+
+.bg-blur {
+    backdrop-filter: blur(20px);
+}
+.sidebar {
+    height: 100%;
+    /*position: absolute;*/
+    left: 0;
+    padding-top: 10px;
+    width: 15rem;
+    /*background-color: rgb(188,170,153);*/
+    z-index: 0;
+}
+
+.sidebar-div {
+    padding: 8px;
+    display: block;
+}
+
+.menu-container {
+    display:flex;
+    justify-content: flex-end;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.mg-left {
+    margin-left: 5rem;
+    width: 80%;
+}
+
+.mg-show-left-1 {
+    margin-left: 2rem;
+    width:65%;
+}
+
+.mg-show-left-2 {
+    margin-left: 2rem;
+    width:35%;
+}
+
+.mg-top {
+    margin-top: 10rem;
+}
+
+.br-theme {
+    /*border: 3px solid  rgb(188,170,153);*/
+    border: 2px solid rgb(82,154,204);
+    border-radius: 2%;
+}
+
+.btn-color {
+    /*background-color: rgb(188,170,153);*/
+    background-color: rgb(128,191,235);
+    border: 2px solid rgb(82,154,204);
+}
+
+.line-color {
+    color: rgb(82,154,204);
+    width: 100%;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(128,191,235,1) 0%, rgba(250,250,250,1) 100%); 
+    color: white;
+    text-align: center;
+}
+
+.add-footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(128,191,235,1) 0%, rgba(250,250,250,1) 100%); 
+    color: white;
+    text-align: center;
+}
